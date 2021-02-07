@@ -4,15 +4,14 @@ RegisterCommand("gps", function(source, args, rawCommand)
 
         SetNewWaypoint(PlayerCoords)
     else
-        local streetName = string.sub(rawCommand, 5)
+        local StreetName = string.sub(rawCommand, 5)
 
         for street, coords in pairs(streetList) do
-            if string.match(string.lower(v[1]), string.lower(StreetName)) then
-                TriggerEvent('chatMessage', "GPS", {255, 255, 0}, "Destination Set to " street)
+            if string.match(string.lower(street), string.lower(StreetName)) then
+                TriggerEvent('chatMessage', "GPS", {255, 255, 0}, "Destination Set to " .. street)
 
-                SetNewWaypoint(coords)
-
-                break
+                SetNewWaypoint(coords[1], coords[2], coords[3])	
+				break
             end
         end
     end
