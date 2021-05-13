@@ -1,5 +1,3 @@
-![enter image description here](https://i.imgur.com/2aH2nNa.png)
-
 # What is this?
 
 The GPS script allow you to do /gps followed by a street name to set a waypoint to the location. The names can be customised in the streetList.lua file if your server has custom ones.
